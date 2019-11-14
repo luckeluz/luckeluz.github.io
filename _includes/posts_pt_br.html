@@ -1,0 +1,47 @@
+<section id="posts" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-white"><u>Mais recentes:</u></h1>
+            </div>
+        </div>
+        {% assign br_posts = site.posts | where: "lang", "pt-br" %}
+        {% for post in br_posts limit:3 %}
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="{{ post.url | prepend: site.baseurl }}">
+                        <img src="/img/cover/{{ post.cover_img }}" class="img-fluid img-thumbnail">
+                    </a>   
+                </div>
+                <div class="col-md-9">
+                    <div>
+                        <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+                        <p class="text-info lead">
+                            {% include translated_date.html date=post.date format="%-d de %B de %Y" lang="pt-br" %}
+                            <!-- {{ post.date | date: "%-d de %b, %Y" }} -->
+                        </p>
+
+                        <p style="font-size: 18px;">
+                            {% if post.summary %}
+                                {{ post.summary }}
+                            {% else %}
+                                {{ post.excerpt }}
+                            {% endif%}
+                        </p>
+                    </div>
+                
+                </div>
+            </div>
+            <hr>
+        {% endfor %}
+        {% if br_posts.size > 3 %}
+        <div class="row">
+            <div class="col">
+                <br>
+                <br>
+                <h4 class="text-center"><a href="{{ site.baseurl }}/pt-br/archive/">>>> Posts mais antigos <<<</a></h4>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>

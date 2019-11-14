@@ -1,0 +1,14 @@
+#archive {
+    a {
+        text-decoration: none;
+        border: none;
+        &:hover {
+            color: $info;
+            text-decoration: underline;
+        }
+    }
+
+    li {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,24 @@
+# Site settings
+title: Lucke Luz
+email: luckeluz@hotmail.com
+author: Lucke Oliveira Luz
+description: A Chemical Engineer's journey into Programming, Data Science, Machine Learning and more...
+url: http://luckeluz.github.io/
+
+# Build settings
+permalink: :title/
+sass:
+  sass_dir: css
+
+#Social icons
+show_social_icons: true
+github: luckeluz
+linkedin: luckeluz
+twitter: lucke_ol
+kaggle: luckeluz
+
+# Disqus Comments
+disqus:
+    # Leave shortname blank to disable comments site-wide.
+    # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+    shortname: luckeluz

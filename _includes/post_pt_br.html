@@ -1,0 +1,30 @@
+<div id="post" class="container pt-3">
+    <div class="row py-2">
+        <div class="col">
+            <h1>{{ page.title }}</h1>
+            <p class="text-info">
+                Por: {{ page.author }}
+            </p>
+            <p class="text-info">
+                {% include translated_date.html date=page.date format="%-d de %B de %Y" lang="pt-br" %} - <i class="fa fa-clock-o" aria-hidden="true"></i> Tempo de leitura: {% include read_time.html %}
+            </p>  
+            <hr>
+            <a href="{{ site.baseurl }}/{{ page.link_en }}" class="text-danger">Read this post in English</a>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <article class="lead">
+                {{ content }}
+            </article>
+        </div>
+    </div>
+</div>
+<div class="container pt-3">
+    <div class="row">
+        <div class="col">
+            {% include disqus_comments.html %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<section id="archive">
+    <div class="container py-3">
+        <div class="row">
+            <div class="col">
+                <h2 class="text-primary">Archive</h2>
+                <ul>
+                    {% assign pt_br_posts = site.posts | where: "lang", "pt-br" %}
+                    {% for post in pt_br_posts %}
+                        <li>
+                            <span>{% include translated_date.html date=post.date format="%-d de %b de %Y" lang="pt-br" %}</span> -
+                            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

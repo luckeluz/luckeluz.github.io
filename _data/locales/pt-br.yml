@@ -1,0 +1,26 @@
+abbreviated_month:
+  - jan.
+  - fev.
+  - nar.
+  - abr.
+  - maio
+  - jun.
+  - jul.
+  - ago.
+  - set.
+  - out.
+  - nov.
+  - dez.
+full_month:
+  - janeiro
+  - fevereiro
+  - março
+  - abril
+  - maio
+  - junho
+  - julho
+  - agosto
+  - setembro
+  - outubro
+  - novembro
+  - dezembro
