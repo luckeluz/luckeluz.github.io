@@ -3,7 +3,7 @@ title: Lucke Luz
 email: luckeluz@hotmail.com
 author: Lucke Oliveira Luz
 description: A Chemical Engineer's journey into Programming, Data Science, Machine Learning and more...
-baseurl: https://luckeluz.github.io/
+baseurl: https://luckeluz.github.io
 
 # Build settings
 permalink: :title/
