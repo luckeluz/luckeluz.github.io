@@ -1,10 +1,10 @@
 <section id="posts" class="py-5">
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1 class="text-white"><u>Most recent:</u></h1>
-            </div>
-        </div>
+<!--        <div class="row">-->
+<!--            <div class="col">-->
+<!--                <h1 class="text-white"><u>Most recent:</u></h1>-->
+<!--            </div>-->
+<!--        </div>-->
         {% assign en_posts = site.posts | where: "lang", "en" %}
         {% for post in en_posts limit:3 %}
             <div class="row">
@@ -35,7 +35,7 @@
             <div class="col">
                 <br>
                 <br>
-                <h4 class="text-center"><a href="{{ site.baseurl }}/archive/">>>> Older posts <<<</a></h4>
+                <div class="text-center"><a href="{{ site.baseurl }}/archive/" class="btn btn-primary">Older posts</a></div>
             </div>
         </div>
         {% endif %}

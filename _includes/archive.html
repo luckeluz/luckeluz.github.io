@@ -3,15 +3,16 @@
         <div class="row">
             <div class="col">
                 <h2 class="text-primary">Archive</h2>
-                <ul>
+                <table>
                     {% assign en_posts = site.posts | where: "lang", "en" %}
                     {% for post in en_posts %}
-                        <li>
-                            <span>{{ post.date | date: "%b %d, %Y" }}</span> -
-                            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                        </li>
+                        <tr>
+                            <td>{{ post.date | date: "%b %d, %Y" }}</td>
+                            <td>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;</td>
+                            <td><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
+                        </tr>
                     {% endfor %}
-                </ul>
+                </table>
             </div>
         </div>
     </div>

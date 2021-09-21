@@ -1,16 +1,16 @@
-.navbar{
+.navbar {
     box-shadow: 1px 1px 3px $primary;
     // opacity: 0.8;
     background: $white;
 
-    .nav-item{
+    .nav-item {
         font-size: 1.2rem;
         padding-right: 20px;
         padding-left: 16px;
     }
 }
 
-.nav-link{
+.nav-link {
     color: $info !important;
 
     &:hover{
