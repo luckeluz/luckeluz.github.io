@@ -1,10 +1,10 @@
 <section id="posts" class="py-5">
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1 class="text-white"><u>Mais recentes:</u></h1>
-            </div>
-        </div>
+<!--        <div class="row">-->
+<!--            <div class="col">-->
+<!--                <h1 class="text-white"><u>Mais recentes:</u></h1>-->
+<!--            </div>-->
+<!--        </div>-->
         {% assign br_posts = site.posts | where: "lang", "pt-br" %}
         {% for post in br_posts limit:3 %}
             <div class="row">
@@ -17,7 +17,7 @@
                     <div>
                         <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
                         <p class="text-info lead">
-                            {% include translated_date.html date=post.date format="%-d de %B de %Y" lang="pt-br" %}
+                            {% include translated_date.html date=post.date format="%-d %B %Y" lang="pt-br" %}
                             <!-- {{ post.date | date: "%-d de %b, %Y" }} -->
                         </p>
 
@@ -39,7 +39,7 @@
             <div class="col">
                 <br>
                 <br>
-                <h4 class="text-center"><a href="{{ site.baseurl }}/pt-br/archive/">>>> Posts mais antigos <<<</a></h4>
+                <div class="text-center"><a href="{{ site.baseurl }}/pt-br/archive/" class="btn btn-primary">Posts mais antigos</a></div>
             </div>
         </div>
         {% endif %}
