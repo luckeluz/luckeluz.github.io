@@ -7,10 +7,10 @@ author: Lucke Luz
 **Note:** The code examples of this article with instructions to execute them are available at the linked 
 [Github Repo](https://github.com/luckeluz/airflow-101).
 
-### Task dependencies - the basics
-In Airflow, trigger rules are what controls whether a task will run based on the status of its dependencies.
+## Task dependencies - the basics
+Before diving into trigger rules, it's important to understand Airflow task dependencies.
 
-So, let's start with the below example to understand what are dependencies.
+So, let's start with the below example.
 
 ```python
 ...
@@ -37,31 +37,53 @@ We run the DAG and voilà... now "t2" didn't run and its state is *upstream_fail
 
 *IMG t2 failed - Airflow UI*
 
-### How to assign trigger rules to tasks
+## How to assign trigger rules to tasks
 
+So, now that we know how dependencies between DAGs, let's see how to manage them using trigger rules. A task's 
+trigger rule will determine when the task will run based on its dependencies status.
 
-### Exploring each trigger rule
+To assign a trigger rule to a task we have to pass the parameter *trigger_rule* to the task decorator as shown in 
+the example below.
 
-#### All success
+```python
+...
+```
+*example_3_assigning_trigger_rule.py
 
-#### All failed
+## Exploring each trigger rule
 
-#### All done
+### All success
 
-#### One failed
+As you might have guessed, the trigger rule *all_success* is the default trigger rule in Airflow. In the previous 
+examples, we showed how it works.
 
-#### One success
+**Definition:** If all dependencies succeed, then run the task, else don't run.
 
-#### None failed
+### All failed
 
-#### None skipped
+**Definition:** If all dependencies fail, then run the task, else don't run.
 
-#### All skipped
+```python
+...
+```
+*example_4_trigger_rule_all_failed.py*
 
-#### One done
+### All done
 
-#### None failed and at least one success
+### One failed
 
-#### Always
+### One success
 
-### Mixing things up - complex use cases
+### None failed
+
+### None skipped
+
+### All skipped
+
+### One done
+
+### None failed and at least one success
+
+### Always
+
+## Mixing things up - complex use cases
